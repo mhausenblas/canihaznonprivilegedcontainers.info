@@ -4,10 +4,31 @@ Did you know that running containers with user `root` not only a bad practice bu
 
 ## The problem
 
+TBD.
+
 ## Reference material
+
+### Official docs
+
+- [Docker security](https://docs.docker.com/engine/security/security/#linux-kernel-capabilities)
+- CoreOS [rkt Capabilities Isolators Guide](https://coreos.com/rkt/docs/latest/capabilities-guide.html)
+- OpenShift [Managing Security Context Constraints](https://docs.openshift.org/latest/admin_guide/manage_scc.html)
+
+### Related activities and discussions
+
+- [rootlesscontaine.rs](https://rootlesscontaine.rs/) by Aleksa Sarai
+- [CIS Benchmark for Kubernetes 1.6](http://blog.aquasec.com/cis-benchmark-for-kubernetes-security)
+- The ThoughtWorks Technology Radar on [container security scanning](https://www.thoughtworks.com/radar/techniques/container-security-scanning)
+- [Privileged Docker Containers](http://obrown.io/2016/02/15/privileged-containers.html)
+- SO question on [Privileged containers and capabilities](https://stackoverflow.com/questions/36425230/privileged-containers-and-capabilities)
+
+### Background
 
 - [User Namespaces: 2017 Status Update and Additional Resources](https://integratedcode.us/2017/02/24/user-namespaces-2017-status-update-and-additional-resources/), 02/17
 - Phil Estes [Rooting out Root: User namespaces in Docker](https://events.linuxfoundation.org/sites/events/files/slides/User%20Namespaces%20-%20ContainerCon%202015%20-%2016-9-final_0.pdf), 09/2016
 - Rami Rosen [Resource management: Linux kernel Namespaces and cgroups](http://www.haifux.org/lectures/299/netLec7.pdf), 05/2013
 
 ## Tooling
+
+- [Quay Security Scanner](https://coreos.com/quay-enterprise/docs/latest/security-scanning.html)
+- [Docker Security Scanning](https://docs.docker.com/docker-cloud/builds/image-scan/)
