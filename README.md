@@ -18,6 +18,7 @@ TBD.
 ### Related activities and discussions
 
 - [rootlesscontaine.rs](https://rootlesscontaine.rs/) by Aleksa Sarai
+- [Getting Towards Real Sandbox Containers](https://blog.jessfraz.com/post/getting-towards-real-sandbox-containers/) by Jess Frazelle
 - [CIS Benchmark for Kubernetes 1.6](http://blog.aquasec.com/cis-benchmark-for-kubernetes-security)
 - The ThoughtWorks Technology Radar on [container security scanning](https://www.thoughtworks.com/radar/techniques/container-security-scanning)
 - [Privileged Docker Containers](http://obrown.io/2016/02/15/privileged-containers.html)
