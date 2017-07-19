@@ -1,6 +1,7 @@
 # Non-privileged containers FTW!
 
-Did you know that running containers with user `root` not only a bad practice but really is a security risk. You might not care when launching a single container on your laptop, but in the context of container orchestrators such as Kubernetes, this is a real problem. This site tries to explain the issue, collects data and reference material and ultimately provide you with tooling to change the status quo. We can do it, if we all work together :)
+Did you know that running containers with user `root` is not only a bad practice but really is a security risk?
+You might not care when launching a single container on your laptop, but in the context of container orchestrators such as Kubernetes, this is a real problem. This site tries to explain the issue, collects data and reference material and ultimately provide you with tooling to change the status quo. We can do it, if we all work together :)
 
 ## The problem
 
