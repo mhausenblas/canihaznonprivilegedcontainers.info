@@ -1,1 +1,2 @@
 - Michael Hausenblas, Red Hat
+- Matt Moyer, Heptio

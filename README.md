@@ -17,6 +17,8 @@ TBD.
 
 ### Related activities and discussions
 
+- [contained.af](https://contained.af/) by Jess Frazelle
+- [containerhardening.org](https://containerhardening.org/) by Jess Frazelle
 - [rootlesscontaine.rs](https://rootlesscontaine.rs/) by Aleksa Sarai
 - [Getting Towards Real Sandbox Containers](https://blog.jessfraz.com/post/getting-towards-real-sandbox-containers/) by Jess Frazelle
 - [CIS Benchmark for Kubernetes 1.6](http://blog.aquasec.com/cis-benchmark-for-kubernetes-security)
