@@ -1,5 +1,5 @@
 theme:          jekyll-theme-dinky
 title:          can I haz non-privileged containers?
 description:    Advocacy site for the uptake of using non-privileged containers.
-show_downloads: "false"
+show_downloads: false
 # google_analytics:
