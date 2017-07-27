@@ -21,7 +21,7 @@ TBD.
 - [containerhardening.org](https://containerhardening.org/) by Jess Frazelle
 - [rootlesscontaine.rs](https://rootlesscontaine.rs/) by Aleksa Sarai
 - [Getting Towards Real Sandbox Containers](https://blog.jessfraz.com/post/getting-towards-real-sandbox-containers/) by Jess Frazelle
-- [Docker and CIS Benchmark](http://blog.aquasec.com/docker-1.11-and-cis-benchmark-whats-new-in-security) 
+- [Docker and CIS Benchmark](http://blog.aquasec.com/docker-1.11-and-cis-benchmark-whats-new-in-security)
 - [CIS Benchmark for Kubernetes 1.6](http://blog.aquasec.com/cis-benchmark-for-kubernetes-security)
 - The ThoughtWorks Technology Radar on [container security scanning](https://www.thoughtworks.com/radar/techniques/container-security-scanning)
 - [Privileged Docker Containers](http://obrown.io/2016/02/15/privileged-containers.html)
@@ -38,5 +38,6 @@ TBD.
 
 - [Quay Security Scanner](https://coreos.com/quay-enterprise/docs/latest/security-scanning.html)
 - [Docker Security Scanning](https://docs.docker.com/docker-cloud/builds/image-scan/)
-- [Aqua Security Scanning and Runtime protection](http://blog.aquasec.com/docker-security-best-practices) 
+- [Aqua Security Scanning and Runtime protection](http://blog.aquasec.com/docker-security-best-practices)
 
+Who's behind this initiative? Check out the [author](https://github.com/mhausenblas/canihaznonprivilegedcontainers.info/blob/master/AUTHORS.md) listing to find out. 
