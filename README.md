@@ -39,5 +39,6 @@ TBD.
 - [Quay Security Scanner](https://coreos.com/quay-enterprise/docs/latest/security-scanning.html)
 - [Docker Security Scanning](https://docs.docker.com/docker-cloud/builds/image-scan/)
 - [Aqua Security Scanning and Runtime protection](http://blog.aquasec.com/docker-security-best-practices)
+- [K8Guard](http://target.github.io/infrastructure/k8guard-the-guardian-angel-for-kuberentes)
 
-Who's behind this initiative? Check out the [author](https://github.com/mhausenblas/canihaznonprivilegedcontainers.info/blob/master/AUTHORS.md) listing to find out. 
+Who's behind this initiative? Check out the [author](https://github.com/mhausenblas/canihaznonprivilegedcontainers.info/blob/master/AUTHORS.md) listing to find out.

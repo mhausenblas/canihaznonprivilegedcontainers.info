@@ -1,3 +1,4 @@
+- Nic Jackson, HashiCorp
 - Liz Rice, Aqua Security
 - Matt Moyer, Heptio
 - Michael Hausenblas, Red Hat
