@@ -26,6 +26,7 @@ TBD.
 - The ThoughtWorks Technology Radar on [container security scanning](https://www.thoughtworks.com/radar/techniques/container-security-scanning)
 - [Privileged Docker Containers](http://obrown.io/2016/02/15/privileged-containers.html)
 - SO question on [Privileged containers and capabilities](https://stackoverflow.com/questions/36425230/privileged-containers-and-capabilities)
+- [Building](https://medium.com/bitnami-perspectives/non-root-containers-to-show-openshift-some-love-3b32d7218ac6) non-ROOT containers by Sebastien Goasguen
 
 ### Background
 

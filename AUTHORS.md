@@ -2,3 +2,4 @@
 - Liz Rice, Aqua Security
 - Matt Moyer, Heptio
 - Michael Hausenblas, Red Hat
+- Sebastien Goasguen, Bitnami
