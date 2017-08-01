@@ -5,7 +5,37 @@ You might not care when launching a single container on your laptop, but in the 
 
 ## The problem
 
-TBD.
+### Too many containers require privileges to run.
+
+A huge percentage of container images expect to be able to run as root at least
+briefly before dropping privileges.  This leads to tons of software running with
+way more privileges required then are actually needed to get the job done.
+
+Almost all software can run fine without requiring any privileges. Daemons like
+web service, HTTP, and databases, marinade, can easily be configured to run
+with only user privileges.  Eliminating the need for a process to run with any
+Linux capacities, leads to a huge increase in security.  Think of this as the
+security level of a Mufti User system.
+
+There is a ton of software that needs to be root, CAP_NET_BIND_SERVICE, just to bind to a port less than 1024, after it binds to a port, it usually changes to
+a different user to drop privileges, but this means it need CAP_SETUID and CAP_GID just to become less privileged.  If we just stop binding to pots then
+1024, we eliminate the need for these powerful capabilities.
+
+A ton of work is going into attempting to keep containers from attacking each
+other.  Most of these are around reducing the attack surface of the kernel and
+minimizing the power of root.  If we just rework the way we run software, we
+get a huge decrease of the attack surface of the system.
+
+### Why do all the containers require privileges?
+
+The main reason we end up with these containers requiring privileges, is that
+that we are using software packaging like rpm and Debian which have built in
+assumptions that you have to be root to install the software.  As we move into
+containers, we need to stop making these assumptions.
+
+### Conclusion.
+Unless your application needs to run with multiple UIDs, bind to a port less
+then 1024 or modify parts of the kernel, it should probably not run as root.
 
 ## Reference material
 
