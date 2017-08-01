@@ -32,8 +32,9 @@ TBD.
 
 - [User Namespaces: 2017 Status Update and Additional Resources](https://integratedcode.us/2017/02/24/user-namespaces-2017-status-update-and-additional-resources/), 02/17
 - Phil Estes [Rooting out Root: User namespaces in Docker](https://events.linuxfoundation.org/sites/events/files/slides/User%20Namespaces%20-%20ContainerCon%202015%20-%2016-9-final_0.pdf), 09/2016
-- Rami Rosen [Resource management: Linux kernel Namespaces and cgroups](http://www.haifux.org/lectures/299/netLec7.pdf), 05/2013
 - Michael Cherny [Docker Security Features, Part 3: User Namespace](http://blog.aquasec.com/docker-1.10-user-namespace), 03/2016
+- Dan Walsh [Are Docker containers really secure?](https://opensource.com/business/14/7/docker-security-selinux), 07/2014
+- Rami Rosen [Resource management: Linux kernel Namespaces and cgroups](http://www.haifux.org/lectures/299/netLec7.pdf), 05/2013
 
 ## Tooling
 
