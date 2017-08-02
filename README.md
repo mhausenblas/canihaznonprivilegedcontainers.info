@@ -1,30 +1,39 @@
 # Non-privileged containers FTW!
 
-Did you know that running containers with user `root` is not only a bad practice but really is a security risk?
-You might not care when launching a single container on your laptop, but in the context of container orchestrators such as Kubernetes, this is a real problem. This site tries to explain the issue, collects data and reference material and ultimately provide you with tooling to change the status quo. We can do it, if we all work together :)
+Did you know that running containers with user `root` is not only a bad
+practice but really is a security risk? You might not care when launching
+a single container on your laptop, but in the context of container
+orchestrators such as Kubernetes, this is a real problem.
+This site tries to explain the issue, collects data and reference material
+and ultimately provide you with tooling to change the status quo.
+We can do it, if we all work together!
 
 ## The problem
 
-### Too many containers require privileges to run.
+### Too many containers require privileges to run
 
-A huge percentage of container images expect to be able to run as root at least
-briefly before dropping privileges.  This leads to tons of software running with
-way more privileges required then are actually needed to get the job done.
+A huge percentage of container images expect to be able to run as root at
+least briefly before dropping privileges. This leads to tons of software
+running with way more privileges required then are actually needed to get
+the job done.
 
-Almost all software can run fine without requiring any privileges. Daemons like
-web service, HTTP, and databases, marinade, can easily be configured to run
-with only user privileges.  Eliminating the need for a process to run with any
-Linux capacities, leads to a huge increase in security.  Think of this as the
-security level of a Mufti User system.
+Almost all software can run fine without requiring any privileges.
+Daemons like web service, HTTP, and databases, can easily be configured to
+run with only user privileges.  Eliminating the need for a process to run
+with any Linux capacities, leads to a huge increase in security. Think of
+this as the security level of a multi-user system.
 
-There is a ton of software that needs to be root, CAP_NET_BIND_SERVICE, just to bind to a port less than 1024, after it binds to a port, it usually changes to
-a different user to drop privileges, but this means it need CAP_SETUID and CAP_GID just to become less privileged.  If we just stop binding to pots then
-1024, we eliminate the need for these powerful capabilities.
+There is a ton of software that needs to be root, `CAP_NET_BIND_SERVICE`,
+just to bind to a port below 1024. After it binds to a port, it usually
+changes to a different user to drop privileges, but this means it needs
+`CAP_SETUID` and `CAP_GID` just to become less privileged. If we just
+stop binding to pots then 1024, we eliminate the need for these powerful
+capabilities.
 
-A ton of work is going into attempting to keep containers from attacking each
-other.  Most of these are around reducing the attack surface of the kernel and
-minimizing the power of root.  If we just rework the way we run software, we
-get a huge decrease of the attack surface of the system.
+A lot of work is going into attempting to keep containers from attacking
+each other. Most of these are around reducing the attack surface of the
+kernel and minimizing the power of root.  If we just rework the way we
+run software, we decrease the attack surface of the system enormously.
 
 ### Why do all the containers require privileges?
 
