@@ -24,7 +24,7 @@ with any Linux capacities, leads to a huge increase in security. Think of
 this as the security level of a multi-user system.
 
 There is a ton of software that needs to be root, `CAP_NET_BIND_SERVICE`,
-just to bind to a port below 1024. After it binds to a port, it usually
+just to bind to a port lower than 1024. After it binds to a port, it usually
 changes to a different user to drop privileges, but this means it needs
 `CAP_SETUID` and `CAP_GID` just to become less privileged. If we just
 stop binding to pots then 1024, we eliminate the need for these powerful
@@ -37,14 +37,20 @@ run software, we decrease the attack surface of the system enormously.
 
 ### Why do all the containers require privileges?
 
-The main reason we end up with these containers requiring privileges, is that
-that we are using software packaging like rpm and Debian which have built in
-assumptions that you have to be root to install the software.  As we move into
-containers, we need to stop making these assumptions.
+The main reason we end up with these containers requiring privileges
+is that we are using software packaging like `rpm` and `deb` which have
+built-in assumptions that you have to be root to install the software.
+As we move into containers, we need to stop making these assumptions.
 
-### Conclusion.
-Unless your application needs to run with multiple UIDs, bind to a port less
-then 1024 or modify parts of the kernel, it should probably not run as root.
+### Conclusion
+
+So unless your application needs to:
+
+1. run with multiple `UID`s,
+1. bind to a port lower than 1024, or
+1. modify parts of the kernel
+
+… it should not run as root.
 
 ## Reference material
 
