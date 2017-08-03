@@ -1,11 +1,11 @@
 # Non-privileged containers FTW!
 
 Did you know that running containers with user `root` is not only a bad
-practice but really is a security risk? You might not care when launching
+practice, but really is a security risk? You might not care when launching
 a single container on your laptop, but in the context of container
 orchestrators such as Kubernetes, this is a real problem.
 This site tries to explain the issue, collects data and reference material
-and ultimately provide you with tooling to change the status quo.
+and ultimately provides you with tooling to change the status quo.
 We can do it, if we all work together!
 
 ## The problem
@@ -14,7 +14,7 @@ We can do it, if we all work together!
 
 A huge percentage of container images expect to be able to run as root at
 least briefly before dropping privileges. This leads to tons of software
-running with way more privileges required then are actually needed to get
+running with way more privileges required than are actually needed to get
 the job done.
 
 Almost all software can run fine without requiring any privileges.
@@ -27,10 +27,10 @@ There is a ton of software that needs to be root, `CAP_NET_BIND_SERVICE`,
 just to bind to a port lower than 1024. After it binds to a port, it usually
 changes to a different user to drop privileges, but this means it needs
 `CAP_SETUID` and `CAP_GID` just to become less privileged. If we just
-stop binding to pots then 1024, we eliminate the need for these powerful
+stop binding to ports then 1024, we eliminate the need for these powerful
 capabilities.
 
-A lot of work is going into attempting to keep containers from attacking
+A lot of work goes into attempting to keep containers from attacking
 each other. Most of these are around reducing the attack surface of the
 kernel and minimizing the power of root.  If we just rework the way we
 run software, we decrease the attack surface of the system enormously.
@@ -72,6 +72,8 @@ So unless your application needs to:
 - [Privileged Docker Containers](http://obrown.io/2016/02/15/privileged-containers.html)
 - SO question on [Privileged containers and capabilities](https://stackoverflow.com/questions/36425230/privileged-containers-and-capabilities)
 - [Building](https://medium.com/bitnami-perspectives/non-root-containers-to-show-openshift-some-love-3b32d7218ac6) non-ROOT containers by Sebastien Goasguen
+- [Understanding How UID and GID Work Inside Containers](https://medium.com/@mccode/understanding-how-uid-and-gid-work-in-docker-containers-c37a01d01cf) by Marc Campbell
+- [Running Docker Containers as non-root](https://blog.csanchez.org/2017/01/31/running-docker-containers-as-non-root/) by Carlos Sanchez
 
 ### Background
 
@@ -80,6 +82,10 @@ So unless your application needs to:
 - Michael Cherny [Docker Security Features, Part 3: User Namespace](http://blog.aquasec.com/docker-1.10-user-namespace), 03/2016
 - Dan Walsh [Are Docker containers really secure?](https://opensource.com/business/14/7/docker-security-selinux), 07/2014
 - Rami Rosen [Resource management: Linux kernel Namespaces and cgroups](http://www.haifux.org/lectures/299/netLec7.pdf), 05/2013
+
+### Responsible security disclosure
+- [Docker email](mailto:security@docker.com) and [webpage](https://www.docker.com/docker-security)
+- [Rkt email](mailto:security@coreos.com) and [webpage](https://coreos.com/security/disclosure/)
 
 ## Tooling
 
@@ -90,3 +96,4 @@ So unless your application needs to:
 - [cnitch, Docker root process monitoring](https://github.com/nicholasjackson/cnitch)
 
 Who's behind this initiative? Check out the [author](https://github.com/mhausenblas/canihaznonprivilegedcontainers.info/blob/master/AUTHORS.md) listing to find out.
+
