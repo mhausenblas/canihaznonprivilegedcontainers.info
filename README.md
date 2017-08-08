@@ -27,8 +27,8 @@ There is a ton of software that needs to be root, `CAP_NET_BIND_SERVICE`,
 just to bind to a port lower than 1024. After it binds to a port, it usually
 changes to a different user to drop privileges, but this means it needs
 `CAP_SETUID` and `CAP_GID` just to become less privileged. If we just
-stop binding to ports then 1024, we eliminate the need for these powerful
-capabilities.
+stop binding to ports lower than 1024, we eliminate the need for these
+powerful capabilities.
 
 A lot of work goes into attempting to keep containers from attacking
 each other. Most of these are around reducing the attack surface of the
